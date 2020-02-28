@@ -85,7 +85,7 @@ order_num ) a LEFT JOIN [dbo].[settlement_t_n_contract_financial] b ON a.order_n
 LEFT JOIN [dbo].[settlement_t_n_contract] c ON b.order_num = c.order_num  \
 LEFT JOIN [dbo].[order_detail_original] d ON c.order_num = d.fin_order_no WHERE  \
  b.delete_status = 'N' AND c.status IN ('0001','0006','0008') ) a ) b WHERE b.row = 1"
-
+####
 ## 门店所在省
 sql5 =  "SELECT c.cus_name, c.tel_phone, c.id_number, b.repayment_num, b.order_num, a.area, \
  a.province,a.city,b.day_start as 交车日期,CASE b.status WHEN  '0001' THEN '还款中'  \
