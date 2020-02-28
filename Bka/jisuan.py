@@ -47,7 +47,7 @@ df1['row'] = df1['row'].fillna(0)
 import pymssql
 import pandas as pd
 from sqlalchemy import create_engine
-engine = create_engine('mssql+pymssql://riskuser:1qaz@WSX@172.30.16.214:1433/H_riskMG_DB')
+engine = create_engine('mssql+pymssql://riskuser:1qaz@WSX@170000:1433/H_riskMG_DB')
 
 conn = engine.connect()
 resselect=engine.execute("truncate table tick_data")
@@ -58,7 +58,7 @@ from sqlalchemy import create_engine
 import pymysql
 from sqlalchemy.types import VARCHAR
 pymysql.install_as_MySQLdb()
-engine = create_engine('mysql+pymysql://root:1160329981wang@58edd9c77adb6.bj.cdb.myqcloud.com:5432/wangzhe?charset=utf8')
+engine = create_engine('mysql+pymysql://root:000000g@58edd9c77adb6.bj.cdb.myqcloud.com:5432/wangzhe?charset=utf8')
 #resselect=engine.execute("truncate table tick_data")
 conn = engine.connect()
 #df1.to_sql('tick_data',conn,if_exists='append',index = False)
